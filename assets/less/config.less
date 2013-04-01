@@ -1,0 +1,97 @@
+/* paths */
+	@base-path: '../../img-new/';
+	@path-twitter-icons:"@{base-path}glyphicons-halflings.png";
+	@path-twitter-icons-white:"@{base-path}glyphicons-halflings-white.png";
+
+/* Color Schemes */
+	// Complementary Color Scheme
+	@color-base: #049cdb;
+	@color-complement1: spin(@color-base, 180);
+	@color-complement2: darken(spin(@color-base, 180), 5%);
+	@color-lighten1: lighten(@color-base, 15%);
+	@color-lighten2: lighten(@color-base, 30%);
+
+
+	//Subtle Color Scheme
+	/*
+	@color-base: #663333;
+	@color-lighter1: lighten(spin(@base, 5), 10%);
+	@color-lighter2: lighten(spin(@base, 10), 20%);
+	@color-darker1: darken(spin(@base, -5), 10%);
+	@color-darker2: darken(spin(@base, -10), 20%);
+	*/
+	//grays
+	@color-black:                 #000;
+	@color-grayDarker:            #222;
+	@color-grayDark:              #333;
+	@color-gray:                  #555;
+	@color-grayLight:             #999;
+	@color-grayLighter:           #eee;
+	@color-white:                 #fff;
+/* General options */
+	@default-margin: 10px 5px;				//a standard margin we will use for spacing most items like forms buttons and so on
+
+/*Button settings*/
+	@radius-button:0;
+	//default
+	@color-button-default:#ccc;
+	@font-color-button-default:#333;
+	@border-color-button-default:darken(@color-button-default,5%);
+
+	//action
+	@color-button-action:#51a351;
+	@font-color-button-action:#fff;
+	@border-color-button-action:darken(@color-button-action,5%);
+
+	//primary
+	@color-button-primary:#53b64d;
+	@font-color-button-primary:#fff;
+	@border-color-button-primary:darken(@color-button-primary,30%);
+
+	//secondary
+	@color-button-secondary:#2a3d67;
+	@font-color-button-secondary:#fff;
+	@border-color-button-secondary:darken(@color-button-secondary,5%);
+
+	//info
+	@color-button-info:#1B569D;
+	@font-color-button-info:#fff;
+	@border-color-button-info:darken(@color-button-info,5%);
+
+	//footer
+	@color-button-footer:#F2802F;
+	@font-color-button-footer:#fff;
+	@border-color-button-footer:darken(@color-button-footer,5%);
+
+/* Typography */
+	@default-font-family:Verdana, Geneva, sans-serif;
+	@default-font-color:#000;
+	@default-font-size:14px;
+
+	@color-h1:#000;
+	@color-h2:#000;
+	@color-h3:#000;
+	@color-h4:#000;
+	@color-h5:#000;
+	@color-h6:#000;
+	@color-p:#000;
+	@color-a:#009;
+	@color-em:#900;
+	@color-del:inherit;
+
+/*  Alerts */
+	@color-alert-success:#468847;
+	@color-alert-warning:#c09853;
+	@color-alert-error:#b94a48;
+	@color-alert-info:#3a87ad;
+
+
+/* Site specific variables */
+	@color-cart-discount: #B4DA55;
+	@color-page-header: #1B569D;
+	@color-tab: #1B569D;
+	@color-active: lighten(@color-tab, 50%);
+	@color-special: #59B74B;
+	@color-attention: #FF0000;
+	@color-step-head: #F2802F;
+
