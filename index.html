@@ -214,11 +214,15 @@
   <div class="section-desktop" id="desktop">
     <div class="container">
       <h3>Web Design</h3>
-      <div class="flexslider-2">
+      <div class="flexslider flexslider-desktop">
         <ul class="slides">
+          <li><img src="assets/img/desk-avsouth.png"></li>
+          <li><img src="assets/img/desk-digitallegal.png"></li>
           <li><img src="assets/img/desk-wohrman-pic1.png"></li>
-          <li><img src="assets/img/desk-wohrman-pic2.png"></li>
-          <li><img src="assets/img/desk-wohrman-pic1.png"></li>
+          <li><img src="assets/img/desk-madmobile.png"></li>
+          <li><img src="assets/img/desk-orangetheoryfit.png"></li>
+          <li><img src="assets/img/desk-millershardware.png"></li>
+          <li><img src="assets/img/desk-metroplex.png"></li>
         </ul>
       </div>
     </div>
@@ -226,6 +230,21 @@
 
   <!-- Print Section
   ================================================== -->
+  <div class="section-print" id="print">
+    <div class="container">
+      <h3>Print Design</h3>
+      <div class="flexslider flexslider-print">
+        <ul class="slides">
+          <li><img src="assets/img/print-belltips.png"></li>
+          <li><img src="assets/img/print-jetplunger.png"></li>
+          <li><img src="assets/img/print-sharkcleaning.png"></li>
+          <li><img src="assets/img/print-spca.png"></li>
+          <li><img src="assets/img/print-quadblade.png"></li>
+          <li><img src="assets/img/print-rhino.png"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
   <!-- Footer
   ================================================== -->
@@ -280,7 +299,8 @@
           <div class="span5">
             <div class="connect">
               <p>Connect with me</p>
-              <a href="http://www.linkedin.com/pub/scott-headlee/a/11/99a" class="linkedin" target="_blank"><i class="icon-linkedin"></i> <span>LinkedIn</span></a>
+              <hr>
+              <a href="http://www.linkedin.com/in/sheadlee" class="linkedin" target="_blank"><i class="icon-linkedin"></i> <span>LinkedIn</span></a>
               <a href="https://www.facebook.com/scott.headlee.7" class="facebook" target="_blank"><i class="icon-facebook"></i> <span>Facebook</span></a>
               <a href="https://twitter.com/scotthea01" class="twitter" target="_blank"><i class="icon-twitter"></i> <span>Twitter</span></a>
             </div>
@@ -291,7 +311,7 @@
   </footer>
   <div class="copyright">
     <div class="container">
-      <p>&copy; 2012 scottheadlee.com. All rights reserved.</p>
+      <p>&copy;<?php echo date("Y") ?> scottheadlee.com. All rights reserved.</p>
     </div>
   </div>
 
@@ -340,19 +360,18 @@
     			animation: "slide",
     			slideshow: false,
     			directionNav: true,
-    			controlNav: true,
+    			controlNav: true
     		});
         $('.flexslider-2').flexslider({
           animation: "slide",
           slideshow: false,
           directionNav: true,
-          controlNav: true,
+          controlNav: true
         });
     	});
-      var $root = $('html, body');
-      $('nav a').click(function() {
-          $root.animate({
-              scrollTop: $( $.attr(this, 'href') ).offset().top
+      $('.nav a').click(function(){
+          $('html, body').animate({
+              scrollTop: $( $.attr(this, 'href') ).offset().top - 40
           }, 500);
           return false;
       });
@@ -366,6 +385,7 @@
         return false;
       });
     </script>
+    
     <script type='text/javascript'>
     // <![CDATA[
 

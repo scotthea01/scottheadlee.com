@@ -153,6 +153,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1e767', end
           box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
 }
 
+.jumbotron:after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: url(../img/london-bridge.jpg) repeat center center !important;
+	opacity: .1 !important;
+}
 /* Link styles (used on .masthead-links as well) */
 .jumbotron a {
   color: #fff;
@@ -197,7 +208,7 @@ only screen and (     -o-min-device-pixel-ratio: 2/1) {
 	:: Logo Section
 	-------------------------------------------------- */
 .section-logo {
-	padding: 40px 0;
+	padding: 20px 0 40px;
 	text-align: left;
 	border-top: 1px solid #fff;
 	border-bottom: 1px solid #ddd;
@@ -209,7 +220,7 @@ only screen and (     -o-min-device-pixel-ratio: 2/1) {
 		text-shadow: 0 1px 0 rgba(255,255,255,1), 0 0 30px rgba(255,255,255,.8);
 	}
 .samples-logo {
-	padding: 20px 0;
+	padding: 10px 0 20px;
 }
 	.samples-logo ul {
 		list-style: none;
@@ -248,7 +259,7 @@ only screen and (     -o-min-device-pixel-ratio: 2/1) {
 	-------------------------------------------------- */
 
 .section-mobile {
-	padding: 40px 0;
+	padding: 20px 0 40px;
 	-webkit-box-shadow: inset 0 10px 14px rgba(0,0,0,.1), inset 0 -10px 14px rgba(0,0,0,.03);
      -moz-box-shadow: inset 0 10px 14px rgba(0,0,0,.1), inset 0 -10px 14px rgba(0,0,0,.03);
           box-shadow: inset 0 10px 14px rgba(0,0,0,.1), inset 0 -10px 14px rgba(0,0,0,.03);
@@ -266,7 +277,7 @@ only screen and (     -o-min-device-pixel-ratio: 2/1) {
 }
 	.section-mobile h3 {
 		margin: 0;
-		padding-bottom: 20px;
+		padding-bottom: 10px;
 		border-bottom: solid 1px #e0e0e0;
 		color: #e0e0e0;
 		text-shadow: 0 1px 0 rgba(255,255,255,1), 0 0 30px rgba(255,255,255,.8);
@@ -301,19 +312,46 @@ only screen and (     -o-min-device-pixel-ratio: 2/1) {
 	:: Desktop Section
 	-------------------------------------------------- */
 .section-desktop {
-	padding: 40px 0;
+	padding: 20px 0 40px;
 	min-height: 650px;
 	border-top: solid 1px white;
 	border-bottom: solid 1px white;
-	background: black url(../img/apple-display-bg.jpg) no-repeat;
-	background-position: 50% 150px;
+	background-color: #1b1b1b;
+	background-image: -moz-linear-gradient(top, #666666, #111111);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#666666), to(#111111));
+	background-image: -webkit-linear-gradient(top, #666666, #111111);
+	background-image: -o-linear-gradient(top, #666666, #111111);
+	background-image: linear-gradient(to bottom, #666666, #111111);
+	background-repeat: repeat-x;
+	border-color: #252525;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff666666', endColorstr='#ff111111', GradientType=0);
+	/*background: url(../img/apple-display-bg.jpg) no-repeat;
+	background-position: 50% 150px;*/
 }
 	.section-desktop h3 {
 		margin: 0;
-		padding-bottom: 20px;
-		border-bottom: solid 1px #333;
-		color: #333;
+		padding-bottom: 10px;
+		border-bottom: solid 1px rgba(0,0,0,0.2);
+		color: rgba(0,0,0,0.2);
 		/*text-shadow: 0 1px 0 rgba(255,255,255,0.3), 0 0 30px rgba(255,255,255,.4);*/
+	}
+
+/*	--------------------------------------------------
+	:: Print Section
+	-------------------------------------------------- */
+.section-print {
+	padding: 20px 0 40px;
+	text-align: left;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #ddd;
+	background: #f1f1f1;
+}
+	.section-print h3 {
+		margin: 0;
+		padding-bottom: 10px;
+		border-bottom: solid 1px #e0e0e0;
+		color: #e0e0e0;
+		text-shadow: 0 1px 0 rgba(255,255,255,1), 0 0 30px rgba(255,255,255,.8);
 	}
 
 /*	--------------------------------------------------
@@ -344,18 +382,21 @@ only screen and (     -o-min-device-pixel-ratio: 2/1) {
 }
 	.connect p {
 		font-size: 20px;
+		color: #999999;
 	}
 	.connect span {
 		font-size: 20px;
 	}
 	.connect a {
 		text-decoration: none;
+		display: block;
+		margin-bottom: 20px;
 	}
 .linkedin, .facebook, .twitter {
-	font-size: 30px;
+	font-size: 22px;
 }
 .linkedin i, .facebook i, .twitter i {
-	width: 30px;
+	width: auto;
 }
 .linkedin {
 	color: #4875B4;
@@ -390,7 +431,7 @@ only screen and (     -o-min-device-pixel-ratio: 2/1) {
 	border-radius: 6px;
 	background-color: #e0e0e0;
 	color: #999;
-	padding: 20px;
+	padding: 100px 60px;
 }
 ::-webkit-input-placeholder {
     color: #999;
@@ -421,20 +462,23 @@ only screen and (     -o-min-device-pixel-ratio: 2/1) {
 	.container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
 		width: 970px;
 	}
-  .navbar .nav {
-	float: right;
-  }
-  .samples-logo li a{
-	width: 226px;
-  }
-  .bs-docs-container {
-    max-width: 970px;
-  }
-  .bs-docs-sidenav {
-    width: 258px;
-  }
-  .bs-docs-sidenav > li > a {
-    width: 230px \9; /* Override the previous IE8-9 hack */
+	.navbar .nav {
+		float: right;
+	}
+	.samples-logo li a{
+		width: 226px;
+	}
+	.bs-docs-container {
+		max-width: 970px;
+	}
+	.bs-docs-sidenav {
+		width: 258px;
+	}
+	.bs-docs-sidenav > li > a {
+		width: 230px \9; /* Override the previous IE8-9 hack */
+	}
+	.section-desktop {
+  	min-height: 400px;
   }
 }
 /* Desktop
@@ -463,6 +507,9 @@ only screen and (     -o-min-device-pixel-ratio: 2/1) {
     margin-top: 30px;
     margin-right: 0;
   }
+  .section-desktop {
+  	min-height: 400px;
+  }
 }
 /* Tablet to desktop
 ------------------------- */
@@ -478,6 +525,9 @@ only screen and (     -o-min-device-pixel-ratio: 2/1) {
   .jumbotron.overview {
     margin-top: -20px; /* Offset bottom margin on .navbar */
   }
+  .jumbotron.overview h1 {
+	font-size: 100px;
+  }
   .samples-logo li a {
   	width: 176px;
   }
@@ -491,6 +541,9 @@ only screen and (     -o-min-device-pixel-ratio: 2/1) {
   }
   .sample-descript h3 {
   	font-size: 20px;
+  }
+  .section-desktop {
+  	min-height: 400px;
   }
 }
 
@@ -529,6 +582,7 @@ only screen and (     -o-min-device-pixel-ratio: 2/1) {
   }
   .section-mobile, .section-logo, .section-desktop, .copyright {
   	padding: 20px;
+  	min-height: 1px;
   }
   .sample-descript {
 	position: relative;
