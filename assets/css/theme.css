@@ -83,7 +83,13 @@ you can use the generic selector below, but it's slower:
 .icon-css3:before {
 	content: "\e00a";
 }
-
+/*	--------------------------------------------------
+	:: Typography
+	-------------------------------------------------- */
+h3 {
+	font-family: Georgia, serif;
+	font-weight: normal;
+}
 /*	--------------------------------------------------
 	:: Home
 	-------------------------------------------------- */
@@ -115,42 +121,63 @@ body > .navbar .brand {
 	:: Overview
 	-------------------------------------------------- */
 .jumbotron.overview {
-	padding: 70px 0 80px;
+	padding: 40px 0 80px;
 	margin-bottom: 0;
 	color: #fff;
 }
 .jumbotron.overview h1 {
-  font-size: 120px;
-  line-height: 1;
-  letter-spacing: -2px;
+	line-height: 1;
+	letter-spacing: -2px;
+	margin-top: 0;
+}
+.jumbotron.overview h2 {
+	font-size: 26px;
+	line-height: 1.2;
+}
+.jumbotron.overview h3 {
+	margin: 0;
 }
 .jumbotron.overview p {
-  font-size: 20px;
-  font-weight: 200;
-  line-height: 1.5em;
-  margin: 40px 40px 0;
-  text-align: left;
+	font-size: 18px;
+	font-weight: 200;
+	color: #000;
+	line-height: 1.5em;
+	margin: 40px 40px 0;
+	text-align: left;
 }
+
+.jumbotron__photo {
+    border: 2px solid #fff;
+    box-shadow: inset 0 1.5px 3px 0 rgba(0,0,0,.15), 0 1.5px 3px 0 rgba(0,0,0,.15);
+    margin: 0 auto 12px;
+	background-color: #fff;
+	width: 72px;
+    height: 72px;
+    box-sizing: border-box;
+    background-clip: content-box;
+    border-radius: 49.9%;
+}
+
 /* Base class
 ------------------------- */
 .jumbotron {
-  position: relative;
-  padding: 40px 0;
-  color: #fff;
-  text-align: center;
-  text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
-  background: #f1e767;
-background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjZjFlNzY3IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZlYjY0NSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
-background: -moz-linear-gradient(-45deg, #f1e767 0%, #feb645 100%);
-background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#f1e767), color-stop(100%,#feb645));
-background: -webkit-linear-gradient(-45deg, #f1e767 0%,#feb645 100%);
-background: -o-linear-gradient(-45deg, #f1e767 0%,#feb645 100%);
-background: -ms-linear-gradient(-45deg, #f1e767 0%,#feb645 100%);
-background: linear-gradient(135deg, #f1e767 0%,#feb645 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1e767', endColorstr='#feb645',GradientType=1 );
-  -webkit-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
-     -moz-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
-          box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+	position: relative;
+	padding: 40px 0;
+	color: #fff;
+	text-align: center;
+	text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
+	background: #f1e767;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjZjFlNzY3IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZlYjY0NSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+	background: -moz-linear-gradient(-45deg, #f1e767 0%, #feb645 100%);
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#f1e767), color-stop(100%,#feb645));
+	background: -webkit-linear-gradient(-45deg, #f1e767 0%,#feb645 100%);
+	background: -o-linear-gradient(-45deg, #f1e767 0%,#feb645 100%);
+	background: -ms-linear-gradient(-45deg, #f1e767 0%,#feb645 100%);
+	background: linear-gradient(135deg, #f1e767 0%,#feb645 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1e767', endColorstr='#feb645',GradientType=1 );
+	-webkit-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+		-moz-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+			box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
 }
 
 .jumbotron:after {
@@ -166,122 +193,136 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1e767', end
 }
 /* Link styles (used on .masthead-links as well) */
 .jumbotron a {
-  color: #fff;
-  color: rgba(255,255,255,.5);
-  -webkit-transition: all .2s ease-in-out;
-     -moz-transition: all .2s ease-in-out;
-          transition: all .2s ease-in-out;
+	color: #fff;
+	color: rgba(255,255,255,.5);
+	-webkit-transition: all .2s ease-in-out;
+		-moz-transition: all .2s ease-in-out;
+			transition: all .2s ease-in-out;
 }
 .jumbotron a:hover {
-  color: #fff;
-  text-shadow: 0 0 10px rgba(255,255,255,.25);
+  	color: #fff;
+  	text-shadow: 0 0 10px rgba(255,255,255,.25);
 }
 /* Pattern overlay
 ------------------------- */
 .jumbotron .container {
-  position: relative;
-  z-index: 2;
+  	position: relative;
+  	z-index: 2;
 }
 .jumbotron:after {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: url(../img/bs-docs-masthead-pattern.png) repeat center center;
-  opacity: .4;
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: url(../img/bs-docs-masthead-pattern.png) repeat center center;
+	opacity: .4;
 }
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (   min--moz-device-pixel-ratio: 2),
 only screen and (     -o-min-device-pixel-ratio: 2/1) {
 
-  .jumbotron:after {
-    background-size: 150px 150px;
-  }
+	.jumbotron:after {
+		background-size: 150px 150px;
+	}
 
+}
+
+/*	--------------------------------------------------
+	:: Sections
+	-------------------------------------------------- */
+.section h3 {
+	margin: 0;
+	color: #666;
+	text-shadow: 0 1px 0 rgba(255,255,255,1), 0 0 30px rgba(255,255,255,.8);
+}
+
+.section .flex-direction-nav .flex-prev {
+	left: -10px;
+}
+.section .flex-direction-nav .flex-next {
+	right: -10px;
 }
 
 /*	--------------------------------------------------
 	:: Logo Section
 	-------------------------------------------------- */
 .section-logo {
-	padding: 20px 0 40px;
+	padding: 20px;
 	text-align: left;
 	border-top: 1px solid #fff;
 	border-bottom: 1px solid #ddd;
 	background: #f1f1f1;
 }
-	.section-logo h3 {
-		margin: 0;
-		color: #e0e0e0;
-		text-shadow: 0 1px 0 rgba(255,255,255,1), 0 0 30px rgba(255,255,255,.8);
-	}
+
 .samples-logo {
 	padding: 10px 0 20px;
 }
-	.samples-logo ul {
-		list-style: none;
-		margin: 0;
-		padding: 0;
-	}
-	.samples-logo li {
-		display: inline-block;
-		margin: 0 0 4px;
-		vertical-align: top;
-		background: #ffffff;
-		background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPHJhZGlhbEdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzUlIj4KICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZTVlNWU1IiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L3JhZGlhbEdyYWRpZW50PgogIDxyZWN0IHg9Ii01MCIgeT0iLTUwIiB3aWR0aD0iMTAxIiBoZWlnaHQ9IjEwMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-		background: -moz-radial-gradient(center, ellipse cover, #ffffff 0%, #e5e5e5 100%);
-		background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#ffffff), color-stop(100%,#e5e5e5));
-		background: -webkit-radial-gradient(center, ellipse cover, #ffffff 0%,#e5e5e5 100%);
-		background: -o-radial-gradient(center, ellipse cover, #ffffff 0%,#e5e5e5 100%);
-		background: -ms-radial-gradient(center, ellipse cover, #ffffff 0%,#e5e5e5 100%);
-		background: radial-gradient(ellipse at center, #ffffff 0%,#e5e5e5 100%);
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=1 );
-	}
-	
-		.samples-logo li a {
-			text-align: center;
-			display: block;
-			width: 226px;
-			border: solid 1px rgba(0,0,0,0.05);
-		}
-		.samples-logo li a img {
-			vertical-align: bottom;
-			width: 90%;
-			margin: 15px 0;
-		}
+.samples-logo ul {
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	margin: 0 -4px;
+	padding: 0;
+}
+.samples-logo li {
+	float: left;
+    width: 50%;
+	margin: 0;
+}
+.samples-logo li a {
+	text-align: center;
+	display: block;
+	margin: 4px;
+	border: solid 1px rgba(0,0,0,0.05);
+
+	background: #ffffff;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPHJhZGlhbEdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzUlIj4KICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZTVlNWU1IiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L3JhZGlhbEdyYWRpZW50PgogIDxyZWN0IHg9Ii01MCIgeT0iLTUwIiB3aWR0aD0iMTAxIiBoZWlnaHQ9IjEwMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-radial-gradient(center, ellipse cover, #ffffff 0%, #e5e5e5 100%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#ffffff), color-stop(100%,#e5e5e5));
+	background: -webkit-radial-gradient(center, ellipse cover, #ffffff 0%,#e5e5e5 100%);
+	background: -o-radial-gradient(center, ellipse cover, #ffffff 0%,#e5e5e5 100%);
+	background: -ms-radial-gradient(center, ellipse cover, #ffffff 0%,#e5e5e5 100%);
+	background: radial-gradient(ellipse at center, #ffffff 0%,#e5e5e5 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=1 );
+}
+.samples-logo li a img {
+	vertical-align: bottom;
+	width: 90%;
+	margin: 15px 0;
+}
 
 /*	--------------------------------------------------
 	:: Mobile Section
 	-------------------------------------------------- */
 
 .section-mobile {
-	padding: 20px 0 40px;
-	-webkit-box-shadow: inset 0 10px 14px rgba(0,0,0,.1), inset 0 -10px 14px rgba(0,0,0,.03);
+	padding: 20px 20px 40px;
+	/* -webkit-box-shadow: inset 0 10px 14px rgba(0,0,0,.1), inset 0 -10px 14px rgba(0,0,0,.03);
      -moz-box-shadow: inset 0 10px 14px rgba(0,0,0,.1), inset 0 -10px 14px rgba(0,0,0,.03);
-          box-shadow: inset 0 10px 14px rgba(0,0,0,.1), inset 0 -10px 14px rgba(0,0,0,.03);
+          box-shadow: inset 0 10px 14px rgba(0,0,0,.1), inset 0 -10px 14px rgba(0,0,0,.03); */
 	border-top: solid 1px white;
 	border-bottom: solid 1px white;
-	background: #e8e8e8;
-	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2U4ZThlOCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjI1JSIgc3RvcC1jb2xvcj0iI2YzZjNmMyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjY3JSIgc3RvcC1jb2xvcj0iI2VlZWVlZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjY3JSIgc3RvcC1jb2xvcj0iI2Y5ZmFmYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: #fff;
+	/* background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2U4ZThlOCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjI1JSIgc3RvcC1jb2xvcj0iI2YzZjNmMyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjY3JSIgc3RvcC1jb2xvcj0iI2VlZWVlZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjY3JSIgc3RvcC1jb2xvcj0iI2Y5ZmFmYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
 	background: -moz-linear-gradient(top, #e8e8e8 0%, #f3f3f3 25%, #eeeeee 60%, #f9fafa 60%, #ffffff 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e8e8e8), color-stop(25%,#f3f3f3), color-stop(60%,#eeeeee), color-stop(60%,#f9fafa), color-stop(100%,#ffffff));
 	background: -webkit-linear-gradient(top, #e8e8e8 0%,#f3f3f3 25%,#eeeeee 60%,#f9fafa 60%,#ffffff 100%);
 	background: -o-linear-gradient(top, #e8e8e8 0%,#f3f3f3 25%,#eeeeee 60%,#f9fafa 60%,#ffffff 100%);
 	background: -ms-linear-gradient(top, #e8e8e8 0%,#f3f3f3 25%,#eeeeee 60%,#f9fafa 60%,#ffffff 100%);
 	background: linear-gradient(to bottom, #e8e8e8 0%,#f3f3f3 25%,#eeeeee 60%,#f9fafa 60%,#ffffff 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8e8e8', endColorstr='#ffffff',GradientType=0 );
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8e8e8', endColorstr='#ffffff',GradientType=0 ); */
 }
-	.section-mobile h3 {
-		margin: 0;
-		padding-bottom: 10px;
-		border-bottom: solid 1px #e0e0e0;
-		color: #e0e0e0;
-		text-shadow: 0 1px 0 rgba(255,255,255,1), 0 0 30px rgba(255,255,255,.8);
-	}
+.section-mobile h3 {
+	padding-bottom: 10px;
+	border-bottom: solid 1px #e0e0e0;
+}
+.section-mobile .flex-control-nav {
+	bottom: -20px;
+}
 .sample-descript {
 	position: absolute;
 	top: 70px;
@@ -312,7 +353,7 @@ only screen and (     -o-min-device-pixel-ratio: 2/1) {
 	:: Desktop Section
 	-------------------------------------------------- */
 .section-desktop {
-	padding: 20px 0 40px;
+	padding: 20px 20px 40px;
 	min-height: 650px;
 	border-top: solid 1px white;
 	border-bottom: solid 1px white;
@@ -328,31 +369,35 @@ only screen and (     -o-min-device-pixel-ratio: 2/1) {
 	/*background: url(../img/apple-display-bg.jpg) no-repeat;
 	background-position: 50% 150px;*/
 }
-	.section-desktop h3 {
-		margin: 0;
-		padding-bottom: 10px;
-		border-bottom: solid 1px rgba(0,0,0,0.2);
-		color: rgba(0,0,0,0.2);
-		/*text-shadow: 0 1px 0 rgba(255,255,255,0.3), 0 0 30px rgba(255,255,255,.4);*/
-	}
+.section-desktop h3 {
+	padding-bottom: 10px;
+	border-bottom: solid 1px rgba(0,0,0,0.2);
+	color: rgba(255,255,255, 0.8);
+	text-shadow: 0 1px 0 rgba(0,0,0,1), 0 0 30px rgba(0,0,0,.8);
+}
+
+.section-desktop .flex-control-nav {
+	bottom: -20px;
+}
 
 /*	--------------------------------------------------
 	:: Print Section
 	-------------------------------------------------- */
 .section-print {
-	padding: 20px 0 40px;
+	padding: 20px 20px 40px;
 	text-align: left;
 	border-top: 1px solid #fff;
 	border-bottom: 1px solid #ddd;
 	background: #f1f1f1;
 }
-	.section-print h3 {
-		margin: 0;
-		padding-bottom: 10px;
-		border-bottom: solid 1px #e0e0e0;
-		color: #e0e0e0;
-		text-shadow: 0 1px 0 rgba(255,255,255,1), 0 0 30px rgba(255,255,255,.8);
-	}
+.section-print h3 {
+	padding: 0 0 10px;
+	border-bottom: solid 1px #e0e0e0;
+}
+
+.section-print .flex-control-nav {
+	bottom: -20px;
+}
 
 /*	--------------------------------------------------
 	:: Footer
@@ -365,7 +410,7 @@ only screen and (     -o-min-device-pixel-ratio: 2/1) {
 }
 .copyright {
 	color: #666;
-	padding: 20px 0;
+	padding: 20px;
 	text-align: left;
 	background-color: #1b1b1b;
 	background-image: -moz-linear-gradient(top, #222222, #111111);
@@ -378,20 +423,20 @@ only screen and (     -o-min-device-pixel-ratio: 2/1) {
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff222222', endColorstr='#ff111111', GradientType=0);
 }
 .connect {
-	margin: 60px 40px;
+	margin: 60px 0;
 }
-	.connect p {
-		font-size: 20px;
-		color: #999999;
-	}
-	.connect span {
-		font-size: 20px;
-	}
-	.connect a {
-		text-decoration: none;
-		display: block;
-		margin-bottom: 20px;
-	}
+.connect p {
+	font-size: 20px;
+	color: #999999;
+}
+.connect span {
+	font-size: 20px;
+}
+.connect a {
+	text-decoration: none;
+	display: block;
+	margin-bottom: 20px;
+}
 .linkedin, .facebook, .twitter {
 	font-size: 22px;
 }
@@ -410,13 +455,13 @@ only screen and (     -o-min-device-pixel-ratio: 2/1) {
 .contact legend {
 	font-size: 24.5px;
 	padding-bottom: 15px;
-	color: #e0e0e0;
+	color: #666;
 	font-weight: bold;
 	text-shadow: 0 1px 0 rgba(255,255,255,1), 0 0 30px rgba(255,255,255,.8);
 }
-	.contact input, .contact textarea {
-		background: #e0e0e0;
-	}
+.contact input, .contact textarea {
+	background: #e0e0e0;
+}
 /*	--------------------------------------------------
 	:: Forms
 	-------------------------------------------------- */
@@ -453,8 +498,166 @@ only screen and (     -o-min-device-pixel-ratio: 2/1) {
 	-moz-transform:  rotate(180deg);
 }
 
+/* Social media widget overrides
+-------------------------------------------------- */
+.contact .framed #body .wrapper {
+	background: none;
+}
+.contact .container-outer {
+	margin-bottom: 10px;
+}
+
 /* Responsive
 -------------------------------------------------- */
+
+/* Landscape phones 
+------------------------- */
+@media (max-width: 480px) {
+	/* Remove padding above jumbotron */
+	body {
+	  padding-top: 0;
+	}
+	.navbar .nav {
+	  float: none;
+	}
+	/* Change up some type stuff */
+	h2 small {
+	  display: block;
+	}
+	/* Downsize the jumbotrons */
+	.jumbotron.overview h1 {
+	  font-size: 45px;
+	}
+	.jumbotron.overview p,
+	.jumbotron.overview .btn {
+	  font-size: 18px;
+	}
+	.jumbotron.overview .btn {
+	  display: block;
+	  margin: 0 auto;
+	}
+  }
+
+/* Tablet
+------------------------- */
+@media (max-width: 767px) {
+	/* Remove any padding from the body */
+	body {
+	  padding-top: 0;
+	  padding-right: 0;
+	  padding-left: 0;
+	}
+	.navbar-fixed-top, .navbar-fixed-bottom, .navbar-static-top {
+	  margin-right: 0;
+	  margin-left: 0;
+	}
+	.navbar .nav {
+	  float: none;
+	}
+	/* Widen masthead and social buttons to fill body padding */
+	.jumbotron {
+	  padding: 40px 20px;
+	  margin-top:   -20px; /* Offset bottom margin on .navbar */
+	  margin-right: 0;
+	  margin-left:  0;
+	}
+	.jumbotron.overview h1 {
+	  font-size: 48px;
+	}
+	.section-mobile, .section-logo, .section-desktop, .copyright {
+		/* padding: 20px; */
+		min-height: 1px;
+	}
+	.sample-descript {
+	  position: relative;
+	  top: 10px;
+	  left: 0;
+	  text-align: center;
+	}
+	.contact {
+	  padding: 20px;	
+	}
+}
+
+/* Tablet to desktop
+------------------------- */
+@media (min-width: 768px) and (max-width: 979px) {
+/* Remove any padding from the body */
+	body {
+		padding-top: 0;
+	}
+	.navbar .nav {
+		float: none;
+	}
+	/* Widen masthead and social buttons to fill body padding */
+	.jumbotron.overview {
+		margin-top: -20px; /* Offset bottom margin on .navbar */
+	}
+	.jumbotron.overview h1 {
+		font-size: 80px;
+	}
+	.jumbotron.overview p {
+	  font-size: 20px;
+	}
+	.samples-logo li {
+		width: 25%;
+	}
+	.sample-descript {
+		position: absolute;
+		top: 10px;
+		left: 0;
+	}
+	.sample-descript h3, .sample-descript p, .sample-descript ul {
+		margin-left: 0;
+	}
+	.sample-descript h3 {
+		font-size: 20px;
+	}
+	.section-desktop {
+		min-height: 400px;
+	}
+}
+
+/* Desktop
+------------------------- */
+@media (min-width: 980px) {
+	/* Unfloat brand */
+	body > .navbar-fixed-top .brand {
+	  float: left;
+	  margin-left: 0;
+	  padding-left: 10px;
+	  padding-right: 10px;
+	}
+	.navbar .nav {
+	  float: right;
+	}
+	/* Inline-block quick links for more spacing */
+	.quick-links li {
+	  display: inline-block;
+	  margin: 5px;
+	}
+
+	.jumbotron.overview h1 {
+		font-size: 100px;
+	}
+	.jumbotron.overview p {
+		font-size: 22px;
+	  }
+  
+	/* When affixed, space properly */
+	.bs-docs-sidenav {
+	  top: 0;
+	  width: 218px;
+	  margin-top: 30px;
+	  margin-right: 0;
+	}
+	.section-desktop {
+		min-height: 400px;
+	}
+	.samples-logo li {
+		width: 25%;
+	}
+}
 
 /* Desktop large
 ------------------------- */
@@ -464,9 +667,6 @@ only screen and (     -o-min-device-pixel-ratio: 2/1) {
 	}
 	.navbar .nav {
 		float: right;
-	}
-	.samples-logo li a{
-		width: 226px;
 	}
 	.bs-docs-container {
 		max-width: 970px;
@@ -478,159 +678,7 @@ only screen and (     -o-min-device-pixel-ratio: 2/1) {
 		width: 230px \9; /* Override the previous IE8-9 hack */
 	}
 	.section-desktop {
-  	min-height: 400px;
-  }
-}
-/* Desktop
-------------------------- */
-@media (max-width: 980px) {
-  /* Unfloat brand */
-  body > .navbar-fixed-top .brand {
-    float: left;
-    margin-left: 0;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-  .navbar .nav {
-	float: right;
-  }
-  /* Inline-block quick links for more spacing */
-  .quick-links li {
-    display: inline-block;
-    margin: 5px;
-  }
-
-  /* When affixed, space properly */
-  .bs-docs-sidenav {
-    top: 0;
-    width: 218px;
-    margin-top: 30px;
-    margin-right: 0;
-  }
-  .section-desktop {
-  	min-height: 400px;
-  }
-}
-/* Tablet to desktop
-------------------------- */
-@media (min-width: 768px) and (max-width: 979px) {
-  /* Remove any padding from the body */
-  body {
-    padding-top: 0;
-  }
-  .navbar .nav {
-	float: none;
-  }
-  /* Widen masthead and social buttons to fill body padding */
-  .jumbotron.overview {
-    margin-top: -20px; /* Offset bottom margin on .navbar */
-  }
-  .jumbotron.overview h1 {
-	font-size: 100px;
-  }
-  .samples-logo li a {
-  	width: 176px;
-  }
-  .sample-descript {
-	position: absolute;
-	top: 10px;
-	left: 0;
-  }
-  .sample-descript h3, .sample-descript p, .sample-descript ul {
-	margin-left: 0;
-  }
-  .sample-descript h3 {
-  	font-size: 20px;
-  }
-  .section-desktop {
-  	min-height: 400px;
-  }
+  		min-height: 400px;
+  	}
 }
 
-/* Tablet
-------------------------- */
-@media (max-width: 767px) {
-  /* Remove any padding from the body */
-  body {
-    padding-top: 0;
-    padding-right: 0;
-    padding-left: 0;
-  }
-  .navbar-fixed-top, .navbar-fixed-bottom, .navbar-static-top {
-	margin-right: 0;
-	margin-left: 0;
-  }
-  .navbar .nav {
-	float: none;
-  }
-  /* Widen masthead and social buttons to fill body padding */
-  .jumbotron {
-    padding: 40px 20px;
-    margin-top:   -20px; /* Offset bottom margin on .navbar */
-    margin-right: 0;
-    margin-left:  0;
-  }
-  .jumbotron.overview h1 {
-    font-size: 90px;
-  }
-  .jumbotron.overview p,
-  .jumbotron.overview .btn {
-    font-size: 24px;
-  }
-  .samples-logo li a {
-  	width: 171px;
-  }
-  .section-mobile, .section-logo, .section-desktop, .copyright {
-  	padding: 20px;
-  	min-height: 1px;
-  }
-  .sample-descript {
-	position: relative;
-	top: 10px;
-	left: 0;
-	text-align: center;
-  }
-  .contact {
-	padding: 20px;	
-  }
-}
-/* Landscape phones
-------------------------- */
-@media (max-width: 480px) {
-  /* Remove padding above jumbotron */
-  body {
-    padding-top: 0;
-  }
-  .navbar .nav {
-	float: none;
-  }
-  /* Change up some type stuff */
-  h2 small {
-    display: block;
-  }
-  .samples-logo li {
-	display: inline-block;
-  }
-  .samples-logo li a {
-	width: 182px;
-  }
-  /* Downsize the jumbotrons */
-  .jumbotron.overview h1 {
-    font-size: 45px;
-  }
-  .jumbotron.overview p,
-  .jumbotron.overview .btn {
-    font-size: 18px;
-  }
-  .jumbotron.overview .btn {
-    display: block;
-    margin: 0 auto;
-  }
-}
-/* Portrait phones
-------------------------- */
-@media (max-width: 320px) {
-  .samples-logo li a {
-	width: 136px;
-  }
-}
