@@ -8,84 +8,45 @@ body {
   position: relative;
   padding-top: 40px;
 }
-/*	--------------------------------------------------
-	:: Font Icons
-	-------------------------------------------------- */
-@font-face {
-	font-family: 'icomoon';
-	src:url('../fonts/icomoon.eot');
-	src:url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/icomoon.woff') format('woff'),
-		url('../fonts/icomoon.ttf') format('truetype'),
-		url('../fonts/icomoon.svg#icomoon') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
 
-/* Use the following CSS code if you want to use data attributes for inserting your icons */
-[data-icon]:before {
-	font-family: 'icomoon';
-	content: attr(data-icon);
-	speak: none;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-	-webkit-font-smoothing: antialiased;
-}
-
-/* Use the following CSS code if you want to have a class per icon */
-/*
-Instead of a list of all class selectors,
-you can use the generic selector below, but it's slower:
-[class*="icon-"] {
-*/
-.icon-linkedin, .icon-facebook, .icon-facebook-2, .icon-apple, .icon-windows8, .icon-twitter, .icon-twitter-2, .icon-facebook-3, .icon-twitter-3, .icon-html5, .icon-css3 {
-	font-family: 'icomoon';
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-	-webkit-font-smoothing: antialiased;
-}
-.icon-linkedin:before {
-	content: "\e000";
-}
-.icon-facebook:before {
-	content: "\e001";
-}
-.icon-facebook-2:before {
-	content: "\e002";
-}
-.icon-apple:before {
-	content: "\e003";
-}
-.icon-windows8:before {
-	content: "\e004";
-}
-.icon-twitter:before {
-	content: "\e005";
-}
-.icon-twitter-2:before {
-	content: "\e006";
-}
-.icon-facebook-3:before {
-	content: "\e007";
-}
-.icon-twitter-3:before {
-	content: "\e008";
-}
-.icon-html5:before {
-	content: "\e009";
-}
-.icon-css3:before {
-	content: "\e00a";
-}
 /*	--------------------------------------------------
 	:: Typography
 	-------------------------------------------------- */
+
+@font-face {
+	font-family: 'icomoon';
+	src:  url('../fonts/icomoon.eot?r4eh4n');
+	src:  url('../fonts/icomoon.eot?r4eh4n#iefix') format('embedded-opentype'),
+		url('../fonts/icomoon.ttf?r4eh4n') format('truetype'),
+		url('../fonts/icomoon.woff?r4eh4n') format('woff'),
+		url('../fonts/icomoon.svg?r4eh4n#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+}
+	
+[class^="icon-"], [class*=" icon-"] {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'icomoon' !important;
+	speak: never;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+	
+.icon-indeed:before {
+	content: "\e900";
+}
+.icon-linkedin:before {
+	content: "\e901";
+}
+
 h3 {
 	font-family: Georgia, serif;
 	font-weight: normal;
@@ -423,7 +384,7 @@ only screen and (     -o-min-device-pixel-ratio: 2/1) {
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff222222', endColorstr='#ff111111', GradientType=0);
 }
 .connect {
-	margin: 60px 0;
+	text-align: center;
 }
 .connect p {
 	font-size: 20px;
@@ -435,23 +396,37 @@ only screen and (     -o-min-device-pixel-ratio: 2/1) {
 .connect a {
 	text-decoration: none;
 	display: block;
-	margin-bottom: 20px;
+	margin: 0 10px 20px;
 }
-.linkedin, .facebook, .twitter {
+.linkedin, .indeed, .facebook, .twitter {
 	font-size: 22px;
 }
-.linkedin i, .facebook i, .twitter i {
+.linkedin i, .facebook i, .twitter i, .indeed i {
 	width: auto;
 }
 .linkedin {
-	color: #4875B4;
+	color: #fff;
 }
-.facebook {
-	color: #3B5998;
+.indeed {
+	color: #fff;
 }
-.twitter {
-	color: #33CCFF;
+
+.btn.linkedin {
+	display: inline-block;
+	background-color: #0072b1;
+	background-image: none;
 }
+.btn.indeed {
+	display: inline-block;
+	background-color: #2164f4;
+	background-image: none;
+}
+
+.btn-large [class^="icon-"], 
+.btn-large [class*=" icon-"] {
+	margin-top: 0;
+}
+
 .contact legend {
 	font-size: 24.5px;
 	padding-bottom: 15px;
@@ -519,6 +494,9 @@ only screen and (     -o-min-device-pixel-ratio: 2/1) {
 	}
 	.navbar .nav {
 	  float: none;
+	}
+	body > .navbar .brand {
+		margin-left: 10px;
 	}
 	/* Change up some type stuff */
 	h2 small {
@@ -588,6 +566,9 @@ only screen and (     -o-min-device-pixel-ratio: 2/1) {
 	}
 	.navbar .nav {
 		float: none;
+	}
+	body > .navbar .brand {
+		margin-left: 10px;
 	}
 	/* Widen masthead and social buttons to fill body padding */
 	.jumbotron.overview {
